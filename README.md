@@ -1,5 +1,9 @@
 # FeathersSwift
 
+IMPORTANT NOTE: This is a fork of feathersjs-ecosystem/feathers-swift to make it compatible with my iOS application. As of May 2019, the original feathers-swift repository does not appear to be being updated, and in fact currently the CocoaPod appears to be broken. I've made modifications to some source to get things working with the feathers backend and have also forked feathers-swift-socketio to enable socket IO support.
+
+This repo is not really intended for public use (at this stage) but you're welcome to use this version if it provides the support you need.
+
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](#carthage) [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Feathers.svg)](#cocoapods) [![GitHub release](https://img.shields.io/github/release/feathersjs-ecosystem/feathers-swift.svg)](https://github.com/feathersjs-ecosystem/feathers-swift/releases) ![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0.x-orange.svg) ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS-lightgrey.svg) ![build](https://travis-ci.org/feathersjs-ecosystem/feathers-swift.svg?branch=master)
 
 ![feathers](https://media.giphy.com/media/Fn8LZVVgTqXba/giphy.gif)
