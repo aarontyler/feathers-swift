@@ -30,7 +30,7 @@ open class Service: ServiceType {
 
         case find(query: Query?)
         case get(id: String, query: Query?)
-        case create(data: [String: Any], query: Query?)
+        case create(data: [String: Any])
         case update(id: String?, data: [String: Any], query: Query?)
         case patch(id: String?, data: [String: Any], query: Query?)
         case remove(id: String?, query: Query?)
@@ -211,7 +211,7 @@ internal extension Service.Hooks {
     ///
     /// - Parameter method: Service method.
     /// - Returns: A list of hooks registered for that service method.
-    internal func hooks(for method: Service.Method) -> [Hook] {
+    func hooks(for method: Service.Method) -> [Hook] {
         switch method {
         case .find: return all + find
         case .get: return all + get
