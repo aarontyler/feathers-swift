@@ -21,18 +21,20 @@ public protocol AuthenticationStorage: class {
 public final class EncryptedAuthenticationStore: AuthenticationStorage {
 
     private let keychain = KeychainSwift()
+    
     private let storageKey: String
 
     public var accessToken: String? {
         get { return keychain.get(storageKey) }
         set {
             guard let value = newValue else { return }
-            keychain.set(value, forKey: storageKey)
+            keychain.set(value, forKey: storageKey, withAccess: .accessibleAlways)
         }
     }
 
     public init(storageKey: String = "feathers-jwt") {
         self.storageKey = storageKey
+        keychain.accessGroup = "group.io.aarontyler.unit508"
     }
 
 }
